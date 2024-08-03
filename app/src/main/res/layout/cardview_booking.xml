@@ -1,0 +1,98 @@
+<!-- cardview_item_layout.xml -->
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="8dp"
+    android:background="#FFFFFF"
+    android:layout_margin="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/linerBooking"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_18sdp"
+            android:layout_marginEnd="@dimen/_18sdp"
+            android:padding="@dimen/_5sdp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Appointment ID :"
+                android:textStyle="bold"
+                android:padding="@dimen/_3sdp"
+                android:textSize="14sp"
+                android:paddingBottom="8dp"/>
+
+        <!-- Header -->
+        <TextView
+            android:id="@+id/text_appointment_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Appointment ID"
+            android:padding="@dimen/_5sdp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#07518F"
+            android:paddingBottom="8dp"/>
+
+        </LinearLayout>
+        <TextView
+            android:id="@+id/underline"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:layout_below="@id/linerBooking"
+            android:background="@color/black" />
+        <!-- Doctor Name -->
+        <TextView
+            android:id="@+id/text_doctor_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:padding="@dimen/_5sdp"
+            android:text="Doctor Name "
+            android:textSize="14sp"/>
+
+        <!-- Specialty -->
+        <TextView
+            android:id="@+id/text_specialty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:padding="@dimen/_5sdp"
+            android:text="Specialty "
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/text_patientName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:padding="@dimen/_5sdp"
+            android:text="Patient "
+            android:textSize="14sp"/>
+
+        <!-- State Code -->
+        <TextView
+            android:id="@+id/text_state_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="State Code"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:padding="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:textSize="14sp"/>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

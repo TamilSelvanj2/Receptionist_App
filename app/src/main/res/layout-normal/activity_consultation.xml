@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingDefaultResource">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".addPatient.ConsultationActivity">
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_height="?attr/actionBarSize"
+            android:elevation="4dp"
+            android:fontFamily="sans-serif-medium"
+            android:theme="@style/AppTheme"
+            app:title="@string/app_name"
+            app:titleTextColor="#07518F" />
+
+<!--        <androidx.appcompat.widget.AppCompatTextView-->
+<!--            android:id="@+id/textViewConsultation"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            android:layout_marginTop="@dimen/_10sdp"-->
+<!--            android:text="CONSULTATION INFO"-->
+<!--            android:textSize="@dimen/_13sdp"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            android:textStyle="bold"-->
+<!--            android:textColor="#07518F"-->
+<!--            android:layout_marginStart="@dimen/_10sdp"-->
+<!--            android:layout_marginEnd="@dimen/_20sdp"-->
+<!--            />-->
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/toolbar"
+             >
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/usernameTextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    app:hintTextColor="#59BBAC"
+                    android:textColorHint="#59BBAC"
+                    app:boxBackgroundMode="none"
+                    app:helperTextTextColor="@color/design_default_color_error"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editTextPatientName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:textSize="@dimen/_13sdp"
+                        android:maxLength="100"
+                        android:fontFamily="sans-serif-medium"
+                        android:background="@drawable/custom_edittext_background"
+                        android:layout_centerVertical="true"
+                        android:hint="First Name * "
+                        android:inputType="text" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/lastname_text_input_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    app:layout_constraintTop_toBottomOf="@+id/usernameTextInputLayout"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    app:hintTextColor="#59BBAC"
+                    android:textColorHint="#59BBAC"
+                    app:boxBackgroundMode="none"
+                    android:layout_marginEnd="@dimen/_20sdp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editTextPatientlastName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:textSize="@dimen/_13sdp"
+                        android:maxLength="100"
+                        android:background="@drawable/custom_edittext_background"
+                        android:layout_centerVertical="true"
+                        android:hint="Last Name"
+                        android:fontFamily="sans-serif-medium"
+                        android:inputType="text" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textFieldDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/lastname_text_input_layout"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    app:helperTextTextColor="@color/design_default_color_error"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    app:hintTextColor="#59BBAC"
+                    android:textColorHint="#59BBAC"
+                    app:boxBackgroundMode="none"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/editTextDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:clickable="false"
+                        android:cursorVisible="false"
+                        android:focusable="false"
+                        android:textSize="@dimen/_14sdp"
+                        android:background="@drawable/custom_edittext_background"
+                        android:drawableEnd="@drawable/baseline_arrow_drop_down_24"
+                        android:ems="10"
+                        android:fontFamily="sans-serif-medium"
+                        android:hint="Date Of Birth*"
+                        android:inputType="date" />
+
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutRadio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:orientation="vertical"
+                    app:layout_constraintTop_toBottomOf="@+id/textFieldDate">
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="GENDER*"
+                        android:textColor="#59BBAC"
+                        />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/radioButtonMale"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:checked="true"
+                            android:text="Male"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/username_text_input_layout" />
+
+                        <!-- Female Radio Button -->
+                        <RadioButton
+                            android:id="@+id/radioButtonFemale"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:text="Female"
+                            android:layout_marginStart="@dimen/_20sdp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/radioMale" />
+
+                        <RadioButton
+                            android:id="@+id/radioButtonOther"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:text="Other"
+                            android:layout_marginStart="@dimen/_20sdp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/radioMale"/>
+                    </RadioGroup>
+                </LinearLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textFieldMobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:hintTextColor="#59BBAC"
+                    android:textColorHint="#59BBAC"
+                    app:boxBackgroundMode="none"
+                    app:helperTextTextColor="@color/design_default_color_error"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayoutRadio">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editTextMobileNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:ems="10"
+                        android:textSize="@dimen/_13sdp"
+                        android:focusable="false"
+                        android:background="@drawable/custom_edittext_background"
+                        android:maxLength="10"
+                        android:fontFamily="sans-serif-medium"
+                        android:hint="Mobile Number"
+                        android:inputType="number" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textFieldEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    app:hintTextColor="#59BBAC"
+                    android:textColorHint="#59BBAC"
+                    app:boxBackgroundMode="none"
+                    app:helperTextTextColor="@color/design_default_color_error"
+                    app:layout_constraintTop_toBottomOf="@+id/textFieldMobile">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editTextEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:hint="Enter Email ID*"
+                        android:background="@drawable/custom_edittext_background"
+                        android:maxLength="100"
+                        android:textSize="@dimen/_13sdp"
+                        android:fontFamily="sans-serif-medium"
+                        android:inputType="textEmailAddress" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/buttonNext"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_36sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="@dimen/_50sdp"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:text="NEXT"
+                    android:textColor="@color/white"
+                    android:padding="@dimen/_5sdp"
+                    android:textSize="@dimen/_13sdp"
+                    android:layout_marginBottom="@dimen/_20sdp"
+                    android:fontFamily="sans-serif-medium"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:background="@drawable/button_background"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

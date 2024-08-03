@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--suppress ALL -->
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingDefaultResource">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".scheduleDoctor.ScheduleDoctorActivity">
+
+
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_height="?attr/actionBarSize"
+                android:elevation="4dp"
+                android:fontFamily="sans-serif-medium"
+                android:theme="@style/AppTheme"
+                app:title="@string/app_name"
+                app:titleTextColor="#07518F" />
+
+<!--            <androidx.appcompat.widget.AppCompatTextView-->
+<!--                android:id="@+id/titleTextView"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_centerVertical="true"-->
+<!--                android:text="ADD DOCTOR "-->
+<!--                android:gravity="center"-->
+<!--                android:textStyle="bold"-->
+<!--                android:textColor="#07518F"-->
+<!--                android:textSize="@dimen/_13ssp"-->
+<!--                android:layout_marginStart="@dimen/_5sdp" />-->
+
+
+<!--        <androidx.appcompat.widget.AppCompatTextView-->
+<!--            android:id="@+id/textViewScheduleDoc"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            android:layout_marginTop="@dimen/_10sdp"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/toolbar"-->
+<!--            android:text="SCHEDULE DOCTOR"-->
+<!--            android:textSize="@dimen/_11sdp"-->
+<!--            android:textStyle="bold"-->
+<!--            android:textColor="#59BBAC"-->
+<!--            android:layout_marginStart="@dimen/_10sdp"-->
+<!--            android:layout_marginEnd="@dimen/_20sdp"-->
+<!--            />-->
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"
+            android:layout_marginTop="@dimen/_1sdp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textFieldDoctor1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_16sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:helperTextTextColor="@color/design_default_color_error"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:hintTextColor="#59BBAC"
+                    android:textColorHint="#59BBAC"
+                    android:layout_marginEnd="@dimen/_20sdp">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/editTextSpecialityName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:focusable="false"
+                        android:clickable="true"
+                        android:fontFamily="sans-serif-medium"
+                        android:background="@drawable/custom_edittext_background"
+                        android:layout_centerVertical="true"
+                        android:textSize="@dimen/_15sdp"
+                        android:hint="Speciality*"
+                        android:inputType="none" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textFieldDoctor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    app:helperTextTextColor="@color/design_default_color_error"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    app:hintTextColor="#59BBAC"
+                    android:textColorHint="#59BBAC"
+                    app:layout_constraintTop_toBottomOf="@+id/textFieldDoctor1">
+
+                  <AutoCompleteTextView
+                        android:id="@+id/editTextDoctor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:focusable="false"
+                        android:clickable="true"
+                        android:background="@drawable/custom_edittext_background"
+                        android:layout_centerVertical="true"
+                        android:textSize="@dimen/_15sdp"
+                        android:hint="Doctor"
+                        android:fontFamily="sans-serif-medium"
+                        android:inputType="none" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textFieldNotes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:hintEnabled="true"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="1000"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    app:helperTextTextColor="@color/design_default_color_error"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    app:hintTextColor="#59BBAC"
+                    android:textColorHint="#59BBAC"
+                    app:layout_constraintTop_toBottomOf="@+id/textFieldDoctor"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editTextNotes"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_80sdp"
+                        android:hint="Notes*"
+                        android:maxLength="1000"
+                        android:gravity="start|top"
+                        android:background="#FAFAFA"
+                        android:textSize="@dimen/_13sdp"
+                        android:fontFamily="sans-serif-medium"
+                        android:inputType="textMultiLine" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            <ProgressBar
+                android:id="@+id/progressBarScheduleDoctor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/_240sdp"
+                android:layout_centerInParent="true" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/buttonNext"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_36sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:text="SUBMIT"
+                    android:textColor="@color/white"
+                    android:padding="@dimen/_5sdp"
+                    android:textSize="@dimen/_13sdp"
+                    android:fontFamily="sans-serif-medium"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginBottom="@dimen/_30sdp"
+                    android:background="@drawable/button_background"
+                    />
+
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

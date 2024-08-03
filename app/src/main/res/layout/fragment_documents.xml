@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.document.DocumentsFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/noDataTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No data available"
+            android:visibility="gone"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:layout_marginTop="20dp"/>
+
+<!--        <androidx.cardview.widget.CardView-->
+<!--            android:id="@+id/documentCard"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="@dimen/_10sdp"-->
+<!--            android:layout_marginEnd="@dimen/_10sdp"-->
+<!--            android:layout_marginBottom="@dimen/_20sdp"-->
+<!--            android:layout_marginTop="@dimen/_10sdp">-->
+
+<!--            <LinearLayout-->
+<!--                android:id="@+id/lines"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="vertical">-->
+
+<!--                &lt;!&ndash; Header with Document Selection &ndash;&gt;-->
+
+<!--                &lt;!&ndash; TextInputLayout for document type selection &ndash;&gt;-->
+<!--                <com.google.android.material.textfield.TextInputLayout-->
+<!--                    android:id="@+id/textFieldDoctor1"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="@dimen/_10sdp"-->
+<!--                    android:layout_marginStart="@dimen/_10sdp"-->
+<!--                    app:hintTextColor="#59BBAC"-->
+<!--                    android:textColorHint="#59BBAC"-->
+<!--                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"-->
+<!--                    android:layout_marginEnd="@dimen/_10sdp">-->
+
+<!--                    <androidx.appcompat.widget.AppCompatAutoCompleteTextView-->
+<!--                        android:id="@+id/editTextDocumentType"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:clickable="true"-->
+<!--                        android:focusable="false"-->
+<!--                        android:background="@drawable/custom_edittext_background"-->
+<!--                        android:textSize="@dimen/_15sdp"-->
+<!--                        android:hint="Document Type"-->
+<!--                        android:inputType="none" />-->
+
+<!--                </com.google.android.material.textfield.TextInputLayout>-->
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginStart="@dimen/_10sdp"-->
+<!--                    android:layout_marginEnd="@dimen/_10sdp"-->
+<!--                    android:background="@drawable/border_background"-->
+<!--                    android:layout_marginTop="@dimen/_10sdp"-->
+<!--                    android:orientation="horizontal">-->
+
+<!--                    &lt;!&ndash; TextView for displaying chosen document &ndash;&gt;-->
+<!--                    <androidx.appcompat.widget.AppCompatTextView-->
+<!--                        android:id="@+id/chooseDocument"-->
+<!--                        android:layout_width="@dimen/_175sdp"-->
+<!--                        android:layout_height="@dimen/_33sdp"-->
+<!--                        android:gravity="start|center"-->
+<!--                        android:layout_marginStart="@dimen/_10sdp" />-->
+
+<!--                    &lt;!&ndash; Button for choosing a document &ndash;&gt;-->
+<!--                    <androidx.appcompat.widget.AppCompatButton-->
+<!--                        android:id="@+id/chooseDocumentBtn"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_gravity="end"-->
+<!--                        android:text="chooseFile"-->
+<!--                        android:textSize="@dimen/_6sdp"-->
+<!--                        android:layout_marginStart="@dimen/_22sdp"-->
+<!--                        android:textColor="#F5F5F5"-->
+<!--                        android:background="@drawable/uploadbtn"-->
+<!--                        />-->
+<!--                </LinearLayout>-->
+
+<!--                &lt;!&ndash; Button for uploading the selected document &ndash;&gt;-->
+<!--                <androidx.appcompat.widget.AppCompatButton-->
+<!--                    android:id="@+id/upLoadDocumentBtn"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:visibility="gone"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:background="@drawable/button_background"-->
+<!--                    android:layout_marginTop="@dimen/_10sdp"-->
+<!--                    android:layout_marginStart="@dimen/_10sdp"-->
+<!--                    android:layout_marginEnd="@dimen/_10sdp"-->
+<!--                    android:text="Upload"-->
+<!--                    android:textColor="@color/white" />-->
+
+<!--                &lt;!&ndash; TextView for viewing more details &ndash;&gt;-->
+<!--                <androidx.appcompat.widget.AppCompatTextView-->
+<!--                    android:id="@+id/viewMore"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:gravity="center"-->
+<!--                    android:textColor="#07518F"-->
+<!--                    android:text="View More"-->
+<!--                    android:layout_marginTop="@dimen/_10sdp"-->
+<!--                    android:layout_marginBottom="@dimen/_20sdp" />-->
+<!--            </LinearLayout>-->
+<!--        </androidx.cardview.widget.CardView>-->
+
+        <ProgressBar
+            android:id="@+id/progressBarsDocument"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone" /> <!-- initially hidden -->
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclersView"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/item_document"
+            />
+    </LinearLayout>
+
+</FrameLayout>

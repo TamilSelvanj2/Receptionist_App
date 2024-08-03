@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+            android:id="@+id/appointmentUpcoming"
+        android:title="UPCOMING" />
+    <item
+        android:id="@+id/appointmentPastHistory"
+        android:title="PAST HISTORY" />
+    <item
+        android:id="@+id/appointmentRejected"
+        android:title="Rejected" />
+
+</menu>

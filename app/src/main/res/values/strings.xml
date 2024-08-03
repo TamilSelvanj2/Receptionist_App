@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">ReceptionistModule</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="enter_otp">Enter OTP</string>
+    <string name="verify">VERIFY</string>
+    <string name="open_nav">Open Navigation Drawer</string>
+    <string name="close_nav">Close Navigation Drawer</string>
+    <string name="choosedocument">Choose Document</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- res/values/strings.xml -->
+    <string name="fcm_server_key">3a6392c56bd71cb1523e0948bc19308e321fa7f7</string>
+
+    <style name="CustomTextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxBackgroundMode">none</item>
+        <item name="boxStrokeWidth">0dp</item>
+        <item name="boxCornerRadiusTopStart">0dp</item>
+        <item name="boxCornerRadiusTopEnd">0dp</item>
+        <item name="boxCornerRadiusBottomStart">2dp</item>
+        <item name="boxCornerRadiusBottomEnd">2dp</item>
+
+        <item name="hintTextColor">#59BBAC</item>
+        <item name="boxStrokeColor">#F0F0F0</item>
+        <item name="android:textColorHint">#59BBAC</item>
+        <!-- Set bottom stroke color -->
+    </style>
+
+    <style name="NavigationText">
+        <item name="android:textColor">#59BBAC</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <!-- Add more text appearance attributes as needed -->
+    </style>
+
+
+</resources>
